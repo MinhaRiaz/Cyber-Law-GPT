@@ -19,8 +19,8 @@ from sentence_transformers import SentenceTransformer
 
 st.set_page_config(
     page_title="Cyber Law GPT",
-    page_icon="⚙️",
-    layout="wide",
+    page_icon="⚖️",
+    layout="wide",  # Forces wide-screen mode
     initial_sidebar_state="expanded",
 )
 
@@ -42,16 +42,13 @@ CHUNK_OVERLAP = 180
 st.markdown(
     """
     <style>
+    /* Remove maximum width restriction to fill the screen */
     .block-container {
         padding-top: 1.5rem;
         padding-bottom: 3rem;
-        max-width: 1200px;
-    }
-    .metric-card {
-        text-align: center;
-        background-color: #f8f9fa;
-        padding: 10px;
-        border-radius: 8px;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        max-width: 100% !important;
     }
     </style>
     """,
