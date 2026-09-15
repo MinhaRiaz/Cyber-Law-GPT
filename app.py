@@ -301,7 +301,7 @@ with st.sidebar:
 
     model_name = st.selectbox(
         "Model",
-        ["llama-3.3-70b-versatile", "llama3-8b-8192", "mixtral-8x7b-32768"],
+        ["openai/gpt-oss-120b", "openai/gpt-oss-20b"],
         index=0,
     )
 
