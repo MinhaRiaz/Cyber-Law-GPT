@@ -342,19 +342,13 @@ except Exception as exc:
 # Main UI Metrics Header
 # ============================================================
 
+# Replace col1 through col4 block with this:
 col1, col2, col3, col4 = st.columns(4)
-with col1:
-    st.caption("PDF pages")
-    st.markdown(f"### {num_pages}")
-with col2:
-    st.caption("Indexed chunks")
-    st.markdown(f"### {len(records)}")
-with col3:
-    st.caption("Vector dimension")
-    st.markdown(f"### {vector_dim}")
-with col4:
-    st.caption("Retrieval")
-    st.markdown("### FAISS")
+
+col1.metric("PDF pages", num_pages)
+col2.metric("Indexed chunks", len(records))
+col3.metric("Vector dimension", vector_dim)
+col4.metric("Retrieval", "FAISS")
 
 st.divider()
 
