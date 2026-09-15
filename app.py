@@ -341,14 +341,20 @@ except Exception as exc:
 # ============================================================
 # Main UI Metrics Header
 # ============================================================
-
-# Replace col1 through col4 block with this:
 col1, col2, col3, col4 = st.columns(4)
 
-col1.metric("PDF pages", num_pages)
-col2.metric("Indexed chunks", len(records))
-col3.metric("Vector dimension", vector_dim)
-col4.metric("Retrieval", "FAISS")
+with col1:
+    st.markdown("<span style='color: #6c757d; font-size: 0.85rem;'>PDF pages</span>", unsafe_allow_html=True)
+    st.markdown(f"### {num_pages}")
+with col2:
+    st.markdown("<span style='color: #6c757d; font-size: 0.85rem;'>Indexed chunks</span>", unsafe_allow_html=True)
+    st.markdown(f"### {len(records)}")
+with col3:
+    st.markdown("<span style='color: #6c757d; font-size: 0.85rem;'>Vector dimension</span>", unsafe_allow_html=True)
+    st.markdown(f"### {vector_dim}")
+with col4:
+    st.markdown("<span style='color: #6c757d; font-size: 0.85rem;'>Retrieval</span>", unsafe_allow_html=True)
+    st.markdown("### FAISS")
 
 st.divider()
 
