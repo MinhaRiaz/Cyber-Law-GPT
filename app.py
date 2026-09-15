@@ -29,7 +29,7 @@ GOOGLE_DRIVE_FILE_ID = "1qv9f1Q3ILaa4ybYa85e8KyXbnlF8a2an"
 PDF_URL = f"https://drive.google.com/uc?export=download&id={GOOGLE_DRIVE_FILE_ID}"
 
 EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
-DEFAULT_GROQ_MODEL = "llama-3.3-70b-versatile"
+DEFAULT_GROQ_MODEL = "openai/gpt-oss-120b"
 
 MAX_PDF_BYTES = 25 * 1024 * 1024
 CHUNK_SIZE = 1200
